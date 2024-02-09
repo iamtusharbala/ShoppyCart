@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import Details from '../components/Details/Details';
 
 const ProductDetails = () => {
     return (
-        <div>ProductDetails</div>
+        <><Details /></>
     )
 }
 
