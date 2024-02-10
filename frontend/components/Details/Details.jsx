@@ -7,8 +7,8 @@ const ProductDetails = () => {
     const { products } = useContext(ProductContext);
     const { id } = useParams();
     const product = products.find((item => item.id === parseInt(id)));
-    const { title, category, images, description, price } = product;
-    const [img1, img2, img3] = images;
+    console.log(product);
+    const { title, category, image, description, price } = product;
     return (
         product &&
         <div className='product-details' >
@@ -17,14 +17,8 @@ const ProductDetails = () => {
                     <div className="col-lg-7">
                         <div id="carouselExampleAutoplaying" className="carousel slide" data-bs-ride="carousel">
                             <div className="carousel-inner">
-                                {img1 && <div className="carousel-item active">
-                                    <img src={img1} className="d-block w-100" alt="..." />
-                                </div>}
-                                {img2 && <div className="carousel-item">
-                                    <img src={img2} className="d-block w-100" alt="..." />
-                                </div>}
-                                {img3 && <div className="carousel-item">
-                                    <img src={img3} className="d-block w-100" alt="..." />
+                                {image && <div className="carousel-item active">
+                                    <img src={image} className="d-block w-100" alt="..." />
                                 </div>}
                             </div>
                             <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">

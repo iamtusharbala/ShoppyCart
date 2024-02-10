@@ -6,7 +6,7 @@ export const ProductContext = createContext();
 const ProductProvider = ({ children }) => {
     const [products, setProducts] = useState([]);
     useEffect(() => {
-        axios.get('https://api.escuelajs.co/api/v1/products')
+        axios.get('https://fakestoreapi.com/products')
             .then((res) => {
                 console.log(res.data);
                 setProducts(res.data)

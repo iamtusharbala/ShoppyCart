@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Navbar.css'
 import { Link } from 'react-router-dom';
+import { MdOutlineShoppingCart } from "react-icons/md";
 
 const Navbar = () => {
+    const [cartCount, setCartCount] = useState(0)
     return (
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
             <div className="container">
@@ -22,11 +24,15 @@ const Navbar = () => {
                             <Link className="nav-link" to="#">Pricing</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="#">Disabled</Link>
+                            <Link className="nav-link" to="/cart"><MdOutlineShoppingCart />&nbsp;Cart
+                                {cartCount > 0 && <span class="position-absolute top-1  translate-middle badge rounded-pill bg-dark">
+                                    {cartCount}
+                                    <span class="visually-hidden">unread messages</span>
+                                </span>}</Link>
                         </li>
                         <li className="nav-item">
-                            <Link type="button" className="btn btn-dark" to="signup">
-                                Sign Up
+                            <Link type="button" className="btn btn-dark" to="login">
+                                Log In
                             </Link>
                         </li>
                     </ul>

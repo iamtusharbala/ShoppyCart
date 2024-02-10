@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Signup = () => {
+const Login = () => {
     return (
         <div className="container">
             <div className="row m-5">
@@ -20,7 +20,7 @@ const Signup = () => {
                         <label className="form-check-label" for="exampleCheck1">Check me out</label>
                     </div>
                     <div className="mb-3">
-                        <p>Already have an account?<Link className="link-opacity-100-hover" to="/login">&nbsp;Login</Link></p>
+                        <p>Don't have an account?<Link className="link-opacity-100-hover" to="/signup">&nbsp;Sign Up</Link></p>
                     </div>
                     <button type="submit" className="btn btn-primary">Submit</button>
                 </form>
@@ -29,4 +29,4 @@ const Signup = () => {
     )
 }
 
-export default Signup
+export default Login
